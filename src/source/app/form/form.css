@@ -1,0 +1,79 @@
+input:-webkit-autofill, 
+input:focus:-webkit-autofill { 
+	-webkit-box-shadow: 0 0 0px 1000px #f7f7f7 inset; 
+}
+
+.lmp-form {
+	position: relative;
+}
+
+.lmp-form input.ng-valid {
+	background: #fff;
+}
+
+.lmp-form-loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #f7f7f7;
+}
+
+.form-item {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+.lmp-form input,
+.lmp-form textarea,
+.lmp-form select {
+    transition: all .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    padding: 30px 12px 12px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 3px 8px rgba(27,27,27,0.08);
+    color: #444;
+}
+
+.lmp-form select {
+	background: #fafafa url(/assets/img/icons/SVG/keyboard_arrow_down.svg) no-repeat calc(100% - 13px) 29px/24px;
+}
+
+.lmp-form label {
+    top: 5px;
+    position: absolute;
+    display: block;
+    padding: 0 12px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    transition: all .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    letter-spacing: 0.5px;
+    color: #777;
+}
+
+.lmp-form textarea:focus,
+.lmp-form input:focus {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-top: 31px;
+}
+
+.lmp-form textarea:focus ~ label,
+.lmp-form input:focus ~ label {
+    top: 0;
+    color: #444;
+    padding: 0;
+    color: #ba4d3d;
+}
+
+.lmp-form-message {
+    background: #f0f0f0;
+    font-weight: 600;
+    padding: 12px 18px;
+    margin: 0 0 24px 0;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: left;
+}

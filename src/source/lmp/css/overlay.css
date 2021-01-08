@@ -1,0 +1,81 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background: rgba(27,27,27,0.8);
+    text-align: center;
+}
+
+.overlay .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    max-width: 280px;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 2px;
+}
+
+.overlay-artwork {
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    margin: 0 0 10px 0;
+}
+
+.overlay-artwork img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-track-title {
+	color: #444;
+	font-size: 13px;
+	margin: 0;
+	line-height: 20px;
+	margin: 0 0 10px 0;
+}
+
+.overlay .select-wrap {
+	width: 100%;
+	display: inline-block;
+    position: relative;
+    background: #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: none;
+    text-align: center;
+}
+
+.overlay select {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: .5px;
+    line-height: 40px;
+    padding: 2px 30px 0 10px;
+    border: none;
+    text-align: center;
+    box-shadow: none;
+}
+
+.overlay button {
+	width: 100%;
+	line-height: 40px;
+	padding: 0;
+	height: 40px;
+	text-align: center;
+}
+
+.overlay .or {
+	display: block;
+	padding: 4px 0;
+	text-align: center;
+}

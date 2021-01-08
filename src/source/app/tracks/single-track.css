@@ -1,0 +1,349 @@
+.track-artwork {
+	width: 200px;
+	height: 200px;
+    box-shadow: 0 3px 8px rgba(25,25,25,.1);
+}
+
+.track-artwork img {
+	width: 100%;
+	height: 100%;
+}
+
+.single-track-detail {
+    position: absolute;
+    width: calc(100% - 420px);
+    left: 260px;
+    bottom: 50px;
+}
+
+.single-track-detail h1 {
+    font-size: 26px;
+    line-height: 36px;
+    margin: 0 0 2px 0;
+}
+
+.lmp-play-large {
+    position: relative;
+    margin-top: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 11px;
+    width: 120px;
+    padding-top: 8px;
+    position: absolute;
+    left: 260px;
+    bottom: 0px;
+}
+
+.track-stats {
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+.track-stats .wrap > div {
+    float: left;
+    position: relative;
+    border-right: 1px solid #e5e5e5;
+    padding: 0 20px 0 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.track-stats .wrap > div:first-of-type {
+    border-left: 1px solid #e5e5e5;
+}
+
+.track-stats > div svg {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 20px;
+}
+
+.track-stats .wrap > share-button button,
+.track-stats .wrap > a {
+    display: block;
+    float: right;
+    position: relative;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 38px;
+    border: 1px solid #e9e9e9;
+    border-bottom: 2px solid #d0d0d0;
+    height: 40px;
+    background: #fff;
+    border-radius: 3px;
+    margin: 5px 0 0 5px;
+    padding: 0 36px 0 20px;
+}
+
+.track-stats .wrap > share-button button svg {
+    left: auto;
+    margin-left: 0;
+}
+
+.track-stats .wrap > a:active {
+    border: 1px solid #e9e9e9!important;
+    border-top: none!important;
+    border-bottom: 1px solid #e5e5e5!important;
+}
+
+.track-stats .wrap > a svg {
+    left: auto;
+    right: 16px;
+    margin-top: -7px;
+}
+
+.track-stats .wrap > a svg.icon-playlist_add {
+    width: 16px;
+    height: 16px;
+    margin-top: -9px;
+    right: 12px;
+}
+
+.related-tracks {
+    margin-top: 20px;
+}
+
+.track-description {
+    position: relative;
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+}
+
+.track-description span > :last-child {
+    margin-bottom: 0;
+}
+
+.description-overlay {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+.track-description > a {
+    position: absolute;
+    display: block;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 960px) {
+
+    .track-stats {
+        margin-top: -20px;
+    }
+
+    .track-stats .wrap > a {
+        padding: 0 36px 0 8px;
+    }
+
+    .track-stats .wrap > a span {
+        display: none;
+    }
+
+    .single-track-detail {
+        position: absolute;
+        width: calc(100% - 240px);
+        left: 230px;
+        bottom: 50px;   
+    }
+
+    .lmp-play-large {
+        left: 230px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .track-artwork {
+        width: 160px;
+        height: 160px;
+    }
+
+    .single-track-detail {
+        position: absolute;
+        width: calc(100% - 190px);
+        left: 180px;
+        bottom: -10px;
+    }
+
+    .lmp-play-large {
+        left: auto;
+        position: relative;
+        width: 160px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+/*    .single-track .page-header {
+        padding-top: 7px;
+    }*/
+
+    .single-track-detail {
+        position: relative;
+        width: 100%;
+        left: auto;
+        bottom: auto;
+        text-align: center;
+    }
+
+    .single-track-detail h1 {
+        font-size: 16px;
+        line-height: 28px;
+        margin: 0;
+    }
+
+    .track-artwork {
+        width: 160px;
+        height: 160px;
+        margin: 10px auto 0 auto;
+    }
+
+    .lmp-play-large {
+        left: auto;
+        position: relative;
+        width: 160px;
+        margin: 10px auto 0 auto;
+        float: none;
+        display: block;
+        left: auto;
+    }
+
+}
+
+
+@media only screen and (max-width: 580px) {
+
+    .track-stats {
+        position: relative;
+        border-bottom: 1px solid #e5e5e5;
+        margin-top: -20px;
+        width: calc(100% + 20px);
+        margin-left: -10px;
+        border-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .track-stats .wrap > div {
+        width: 33.3333333%;
+        line-height: 46px;
+        border-bottom: 1px solid #e5e5e5;
+        background: #f7f7f7;
+        padding: 0 5px;
+        text-align: center;
+    }
+
+    .track-stats .wrap > div svg {
+        left: 8px;
+        /* margin-top: -2px; */
+        position: relative;
+        left: auto;
+        top: 1px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .track-stats .wrap > div:first-of-type {
+        border-left: none;
+    }
+
+    .track-stats .wrap > div:last-of-type {
+        border-right: none;
+    }
+
+     .track-stats.col-3 .wrap > a,
+     .track-stats.col-3 .wrap > share-button {
+        width: 33.3333333%;
+    }
+
+    .track-stats.col-4 .wrap > a,
+    .track-stats.col-4 .wrap > share-button {
+        width: 25%;
+    }
+
+    .track-stats.col-5 .wrap > a,
+    .track-stats .wrap > share-button {
+        width: 20%;
+    }
+
+    .track-stats .wrap > a,
+    .track-stats .wrap > share-button {
+        margin: 0;
+        border: none;
+        border-right: 1px solid #e5e5e5;
+        border-radius: 0;
+        padding: 0;
+        padding: 0 36px 0 8px;
+        height: 46px;
+        line-height: 46px;
+        float: right;
+        font-size: 0;
+        margin: 0;
+    }
+
+    .track-stats > div svg {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        left: 20px;
+    }
+
+    .track-stats .wrap > a,
+    .track-stats .wrap > share-button {
+        padding: 0;
+    }
+
+    .track-stats .wrap > a svg,
+    .track-stats .wrap > share-button button svg {
+        right: auto;
+        left: 50%;
+        margin-left: -8px;
+        left: 50%;
+        right: 16px;
+        margin-top: -8px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .track-stats .wrap > a svg use,
+    .track-stats .wrap > share-button svg use {
+        fill: #ba4d3d;
+    }
+
+    .track-stats .wrap > share-button button {
+        background: none;
+        border: none;
+        border-radius: 0;
+        line-height: 46px;
+        height: 46px;
+        margin: 0;
+        display: block;
+        padding: 0;
+        width: 100%;
+        font-size: 0;
+    }
+
+}

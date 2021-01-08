@@ -1,0 +1,39 @@
+<h4 class="widget-title">
+	<span data-ng-bind="$ctrl.count + ' Comment' + ( $ctrl.count !== 1 ? 's' : '' )">Comments</span>
+</h4>
+
+<p class="no-comments" data-ng-if="$ctrl.count == 0">No comments, yet. Why not add one?<span data-ng-if="!$ctrl.auth"> <a data-ng-click="$ctrl.login()">Sign in</a> or <a data-ng-click="$ctrl.login()">register free</a> to add comments.</span></p>
+
+<ul class="comment-list" data-ng-if="$ctrl.list.length > 0">
+
+	<li data-ng-repeat="item in $ctrl.list">
+		
+		<div class="avatar">
+			<img data-ng-src="{{ item.profile_image ? item.profile_image : '/assets/img/users/lmp-default-profile.png' }}" data-ng-attr-alt="{{ item.author_name }}">
+		</div>
+
+		<h4>
+			<span data-ng-bind="item.author_name"></span>
+		</h4>
+
+		<div data-ng-bind-html="item.content.rendered"></div>
+
+		<p data-ng-bind="item.date | date : 'd MMM yyyy \'at\' h:mm a'"></p>
+
+	</li>
+
+</ul>
+
+<data-pagination page="$ctrl.page" pages="$ctrl.pages"></data-pagination>
+
+<form id="comment-form" data-ng-if="$ctrl.auth" class="lmp-form" data-ng-submit="$ctrl.submit_comment()">
+
+	<div class="form-item">
+		<textarea id="comment" name="comment" data-ng-model="$ctrl.comment" required></textarea>
+		<label for="comment">Your comment</label>
+		<button type="submit">
+			Submit
+		</button>
+	</div>
+
+</form>

@@ -1,0 +1,36 @@
+.lmp-menu-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.lmp-menu-toggle i {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    transition: all 0.4s;
+}
+
+.lmp-menu-toggle i:first-of-type {
+    margin-top: -5px;
+}
+
+.lmp-menu-toggle i:last-of-type {
+    margin-top: 5px;
+}
+
+.active .lmp-menu-toggle i {
+    margin-top: 0;
+    transform: rotate(-45deg);
+}
+
+.active .lmp-menu-toggle i:last-of-type {
+    transform: rotate(45deg);
+}

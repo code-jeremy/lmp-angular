@@ -1,0 +1,76 @@
+ul.user-actions {
+    position: relative;
+    margin: 0;
+}
+
+.user-actions li {
+    display: block;
+    width: calc((100% - 10px) / 2);
+    float: left; 
+    position:relative;
+    margin: 0 10px 10px 0;
+    height: 90px;
+}
+
+.user-actions li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.user-actions li a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.user-actions svg {
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    padding: 32px 10px;
+    background: #f9f9f9;
+    border-right: 1px solid #e5e5e5;
+    top: 0;
+    left: 0;
+}
+
+.user-actions svg path,
+.user-actions svg use {
+    fill: #ba4d3d
+}
+
+.user-actions span {
+    display: block;
+    width: calc(100% - 60px);
+    float: right;
+    padding: 0 20px;
+    top: 50%;
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    font-weight: 600;
+    color: #444;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .user-actions li {
+        width: 100%;
+        margin-right: 0;
+        height: 60px;
+    }  
+
+    .user-actions svg {
+        width: 60px;
+        padding: 18px 10px;
+        background: #f9f9f9;
+        border-right: 1px solid #e5e5e5;
+    }
+
+}

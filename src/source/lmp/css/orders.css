@@ -1,0 +1,177 @@
+.orders {
+  position: relative;
+  border: 1px solid #f0f0f0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-bottom: 0!important;
+}
+
+.orders li {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px;
+}
+
+.orders li :last-child {
+  border-bottom: none;
+} 
+
+.orders li:first-child {
+  background: #f6f6f6;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 10px;
+  box-shadow: 0 2px 6px rgba(27,27,27,0.08);
+  padding: 10px 20px;
+}
+
+.orders li div {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.orders li div:nth-of-type(2) {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.button.buy-now {
+  padding: 10px 30px!important;
+  float: right;
+}
+
+.buy-now-paypal {
+  height: 28px;
+  width: 40px;
+  display: block;
+  float: right;
+}
+
+.buy-now-paypal use {
+  fill: #003087;
+}
+
+.orders li div:first-child {
+  text-align: left;
+  flex: 1;
+}
+
+.orders li div:last-child {
+  text-align: right;
+  flex: 1;
+}
+
+ul.order-pricing,
+ul.order-detail {
+  border: 1px solid #f0f0f0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin: 0 0 20px 0;
+  margin-bottom: 20px;
+  padding-bottom: 0!important;
+}
+
+ul.order-pricing strong,
+ul.order-detail strong {
+  font-weight: 600
+}
+
+ul.order-pricing li,
+ul.order-detail li {
+  min-height: 69px;
+  padding: 20px 20px 20px 200px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+
+ul.order-detail li:nth-child(odd) {
+  background: #f6f6f6;
+}
+
+ul.order-pricing li > span:first-of-type,
+ul.order-detail li > span:first-of-type {
+  position: absolute;
+  left: 0;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+
+ul.order-pricing li {
+  padding: 20px 20px 20px 80%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  ul.order-pricing li > span:first-of-type,
+  ul.order-detail li > span:first-of-type {
+    font-size: 9px;
+  }
+
+  ul.order-pricing li {
+    min-height: auto;
+    padding: 10px 10px 10px 130px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    font-size: 12px!important;
+  }
+}
+
+ul.order-pricing li:first-child {
+  background: #f6f6f6;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(27,27,27,0.08);
+}
+
+.checkout-cancel {
+  float: left;
+}
+
+.checkout-cancel a {
+  background: #444!important;
+}
+
+.checkout-action {
+  float: right;
+  text-align: right;
+  font-weight: 600;
+}
+
+.checkout-action p {
+  margin: 0 0 10px 0;
+}
+
+.paypal-checkout {
+  display: inline-block;
+  line-height: 0;
+  height: 39px;
+  width: auto;
+  vertical-align: top;
+}
+
+.paypal-checkout img {
+  height: 100%;
+  width: auto;
+}
+
+li a.windows,
+li a.mac {
+  display: block;
+  font-weight: 500;
+}
+
+li a.windows span,
+li a.mac span {
+  display: inline-block;
+  width: 100px;
+  font-size: 10px;
+  color: #444;
+}

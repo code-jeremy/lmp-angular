@@ -1,0 +1,50 @@
+ul.lmp-track-list.chart-list {
+	padding-left: 32px;
+	counter-reset: section;
+}
+
+ul.lmp-track-list.chart-list li::before {
+	counter-increment: section;
+	content: counter(section);
+	position: absolute;
+	left: -32px;
+	font-size: 12px;
+	font-weight: 600;
+	top: 9px;
+	line-height: 20px;
+	margin-top: -10px;
+	line-height: 80px;
+	border-top: 1px solid #e5e5e5;
+	width: 32px;
+	text-align: left;
+}
+
+ul.lmp-track-list.chart-list li:first-child:before {
+	border-top: none;
+}
+
+ul.lmp-track-list.chart-list li:last-child:before {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+@media only screen and (max-width: 960px) {
+
+	ul.lmp-track-list.chart-list {
+		padding-left: 24px; 
+	}
+
+	ul.lmp-track-list.chart-list li::before {
+		left: -24px;
+		line-height: 80px;
+		width: 24px;
+	}
+	
+}
+
+@media only screen and (max-width: 600px) {
+
+	ul.lmp-track-list.chart-list li::before {
+    	line-height: 70px;
+    }
+
+}

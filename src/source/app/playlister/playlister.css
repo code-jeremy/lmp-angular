@@ -1,0 +1,198 @@
+.playlist-manager.overlay {
+    text-align: left;
+    z-index: 10;
+}
+
+.playlist-manager.ng-enter, 
+.playlist-manager.ng-leave {
+    transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.playlist-manager.ng-enter,
+.playlist-manager.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.playlist-manager.ng-leave,
+.playlist-manager.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.playlist-manager.ng-enter .inner,
+.playlist-manager.ng-leave .inner {
+    transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.playlist-manager.ng-enter .inner,
+.playlist-manager.ng-leave.ng-leave-active .inner {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30%);
+    -ms-transform: translateX(-50%) translateY(-30%);
+    -webkit-transform: translateX(-50%) translateY(-30%);
+}
+
+.playlist-manager.ng-leave .inner,
+.playlist-manager.ng-enter.ng-enter-active .inner {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+.playlist-manager.overlay .inner {
+    background: #f7f7f7;
+}
+
+.playlist-manager h3 {
+    display: block;
+    position: relative;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 23px;
+}
+
+.playlist-manager h3:before {
+    content: "";
+    background: #f7f7f7;
+    border-bottom: none;
+    position: absolute;
+    top:  -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 50px;
+    z-index: -1
+}
+
+.playlister-back {
+    display: block;
+    background: #f7f7f7;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 26px;
+    color: #555;
+    padding: 8px 10px 8px 30px;
+    position: absolute;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    bottom: -53px;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+}
+
+.playlister-back svg {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 10px;
+    top: 12px;
+}
+
+a.select-stage {
+    display: block;
+    line-height: 48px;
+    border: 1px solid #e9e9e9;
+    border-bottom: 2px solid #b0b0b0;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 10px;
+    background: #fff;
+}
+
+a.select-stage:active {
+    border: 1px solid #f9f9f9!important;
+    border-top: none!important;
+    border-bottom: 1px solid #e5e5e5!important;
+}
+
+.playlist-manager select {
+    border: 1px solid #e9e9e9;
+    border-bottom: 3px solid #d0d0d0;
+}
+
+input[type=text].raised-input {
+    border: 1px solid #e9e9e9;
+    border-bottom: 3px solid #d0d0d0;   
+}
+
+.raised-input + p {
+    font-size: 12px;
+    margin: 12px 0 0;
+    line-height: 20px;
+    font-weight: 400;
+    color: #444;
+}
+
+.playlister-confirm {
+    background: #ba4d3d;
+    border-bottom: 2px solid #582720;
+    color: #fff;
+    float: right;
+    width: calc(50% - 5px);
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.playlist-manager .modal-close svg {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -9px 0 0 -9px;
+}
+
+.playlist-manager .modal-close svg use {
+    fill: #444!important;
+}
+
+.playlist-manager button.modal-close {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border-color: #444;
+    z-index: 1;
+}
+
+.playlister-icon {
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    clear: both;
+    border: 2px solid #555;
+    position: relative;
+}
+
+.playlister-icon span,
+.playlister-icon svg {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -12px;
+    text-align: center;
+    font-size: 24px;
+    color: red;
+}
+
+.playlister-icon.error-alert {
+    color: red;
+    border-color: red;
+}
+
+.playlister-message {
+    text-align: center;
+    margin: 0;
+}

@@ -1,0 +1,44 @@
+.lmp-faqs {
+    position: relative;
+}
+
+.lmp-faqs h2 {
+    text-align: center;
+}
+
+.lmp-faq h3 {
+    background: #fff;
+    padding: 16px 40px 16px 20px;
+    margin: 0 0 10px;
+    border-top: 1px solid #f9f9f9;
+    /* border-bottom: 2px solid #d3d3d3; */
+    box-shadow: 0 3px 8px rgba(27,27,27,0.08);
+    font-size: 16px;
+    line-height: 26px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.lmp-faq h3 svg {
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+}
+
+.lmp-faq svg use {
+    fill: #ba4d3d;
+}
+
+.faq-answer {
+    padding: 16px 20px 26px 20px;
+}
+
+.faq-answer > :last-child {
+	margin-bottom: 0;
+}

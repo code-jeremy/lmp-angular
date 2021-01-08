@@ -1,0 +1,22 @@
+.contact .lmp-slider h2,
+.contact .lmp-slider p {
+	text-align: center;
+}
+
+.contact .lmp-row {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.contact .lmp-form {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.contact .lmp-form [vc-recaptcha] {
+	width: 300px;
+	margin: 0 auto 24px auto;
+}

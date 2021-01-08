@@ -1,0 +1,11 @@
+.studio .lmp-slider h2,
+.studio .lmp-slider p {
+	text-align: center;
+}
+
+.studio .lmp-row {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}

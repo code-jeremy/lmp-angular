@@ -1,0 +1,58 @@
+<!-- <section class="playlist-manager overlay">
+
+	<div class="inner">
+
+		<button class="modal-close" data-ng-click="playlist_manager.cancel()" data-ng-if="playlist_manager.stage === 'complete'"> 
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-close"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-clear"></use></svg>
+		</button>
+
+		<div data-ng-if="playlist_manager.stage === 'type'">
+
+			<h2>Add to playlist</h2>
+
+			<select data-ng-options="playlist.id as playlist.title for playlist in playlist_manager.data.playlists track by playlist.id" data-ng-model="playlist_manager.data.selected" data-ng-if="playlist_manager.data.auth && playlist_manager.data.playlists.length > 0">
+				<option value="">Select Playlist</option>
+			</select>
+
+			<span class="or" data-ng-if="playlist_manager.data.auth && playlist_manager.data.playlists.length > 0">or</span>
+
+			<button data-ng-click="playlist_manager.stage = 'create-new'">Create new playlist</button>
+
+			<button type="reset" data-ng-click="playlist_manager.cancel()">Cancel</button>
+
+		</div>
+
+		<form data-ng-submit="playlister.create()" name="form" data-ng-if="playlist_manager.stage === 'create-new'">
+
+			<h2>Create new playlist</h2>
+
+			<input 
+			type="text"
+			id="title" 
+			name="title" 
+			placeholder="Enter playlist name" 
+			ng-model="playlist_manager.data.new_title"  
+			ng-pattern="playlist_manager.title_regex" 
+			required="true" 
+			ng-minlength="4"  
+			ng-maxlength="30">
+
+			<p>Only letters, numbers, spaces, dashes and underscores between 4 - 30 characters.</p>
+				
+			<button type="submit" class="playlist-panel-button" data-ng-disabled="form.title.$invalid">Create playlist</button>
+
+			<button type="reset" data-ng-click="playlist_manager.cancel()">Cancel</button>
+
+		</form>
+
+		<div class="playlist-manager-loading" data-ng-if="playlist_manager === 'loading'"><span>Loading</span></div>
+
+		<div data-ng-if="playlist_manager.stage === 'complete'">
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-close"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-clear"></use></svg>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-close"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-clear"></use></svg>
+			<p data-ng-bind-html="playlist_manager.message"></p>
+		</div>
+
+	</div>
+
+</section> -->

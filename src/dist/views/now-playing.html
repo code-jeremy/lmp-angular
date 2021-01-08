@@ -1,0 +1,35 @@
+<div class="inner">
+
+	<button class="modal-close" data-ng-click="main.toggle_current()">
+		<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-close"><use xlink:href="img/icons/symbol-defs.svg#icon-close"/></svg>
+	</button>
+
+	<div class="modal-artwork">
+		<img alt="" data-ng-src="{{ now_playing.storage.current.artwork }}">
+	</div>
+
+	<h2 data-ng-bind-html="now_playing.storage.current.title"></h2>
+	<p data-ng-bind-html="now_playing.storage.current.artists"></p>
+
+	<div class="modal-stats">
+		<div>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-access_time"><use xlink:href="img/icons/symbol-defs.svg#icon-access_time"/></svg>
+			<span data-ng-bind="now_playing.storage.current.duration_display"></span>
+		</div>
+		<div>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-play_arrow"><use xlink:href="img/icons/symbol-defs.svg#icon-play_arrow"/></svg>
+			<span data-ng-bind="now_playing.storage.current.plays"></span>
+		</div>
+		<div>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-favorite" data-ng-if="now_playing.storage.current.user_like"><use xlink:href="img/icons/symbol-defs.svg#icon-favorite"/></svg>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-favorite" data-ng-if="!now_playing.storage.current.user_like"><use xlink:href="img/icons/symbol-defs.svg#icon-favorite"/></svg>
+			<span data-ng-bind="now_playing.storage.current.likes"></span>
+		</div>
+	</div>
+
+	<ul>	
+		<li><a data-ng-href="/{{ now_playing.storage.current.format }}/{{ now_playing.storage.current.slug }}" data-ng-attr-title="{{ lmp_track.data.title }}">Go to track<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-keyboard_arrow_right"><use xlink:href="img/icons/symbol-defs.svg#icon-keyboard_arrow_right"/></svg></a></li>
+		<li><a data-ng-click="now_playing.like()"><span data-ng-bind="( now_playing.storage.current.user_like ? 'Unlike' : 'Like' )"></span><svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-favorite" data-ng-if="now_playing.storage.current.user_like"><use xlink:href="img/icons/symbol-defs.svg#icon-favorite"/></svg><svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-favorite" data-ng-if="!now_playing.storage.current.user_like"><use xlink:href="img/icons/symbol-defs.svg#icon-favorite_outline"/></svg></a></li>
+	</ul>
+
+</div>

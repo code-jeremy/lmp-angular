@@ -1,0 +1,102 @@
+.article-stats {
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+.article-stats .wrap > div {
+    float: left;
+    position: relative;
+    border-right: 1px solid #e5e5e5;
+    padding: 0 20px 0 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.article-stats .wrap > div:first-of-type {
+    border-left: 1px solid #e5e5e5;
+}
+
+.article-stats > div svg {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 20px;
+}
+
+.article-stats .wrap > a {
+    display: block;
+    float: right;
+    position: relative;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 38px;
+    border: 1px solid #e9e9e9;
+    border-bottom: 2px solid #d0d0d0;
+    height: 40px;
+    background: #fff;
+    border-radius: 3px;
+    margin: 5px 0 0 5px;
+    padding: 0 36px 0 20px;
+}
+
+.article-stats .wrap > share-button button {
+    float: right;
+}
+
+.article-stats .wrap > share-button button svg {
+    left: auto;
+}
+
+.article-stats .wrap > a:active {
+    border: 1px solid #e9e9e9!important;
+    border-top: none!important;
+    border-bottom: 1px solid #e5e5e5!important;
+}
+
+.article-stats .wrap > a svg {
+    left: auto;
+    right: 16px;
+    margin-top: -7px;
+}
+
+.main-article .lmp-video-wrap {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .main-article .page-header h1 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .article-stats {
+        margin-top: -20px;
+    }
+
+    .article-stats .wrap > a {
+        padding: 0 36px 0 8px;
+    }
+
+    .article-stats .wrap > a span {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .article-stats {
+        margin-bottom: 20px;
+    }
+
+}

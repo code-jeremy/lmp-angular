@@ -1,0 +1,53 @@
+<div class="page-header" page-header data-ng-class="{ fixed: page_header.class }"><div class="wrap"><h1>My Profile</h1></div></div><div class="wrap"><main class="lmp-content-left"><div class="manage-profile-picture"><!-- 			<form name="profilepicture">
+				<input type="file" ngf-select data-ng-model="profile.image_file" name="file"    
+		             accept="image/jpeg" ngf-max-size="2MB" required
+		             ngf-model-invalid="profile.file_error">
+				<i data-ng-show="profilepicture.file.$error.required">*required</i><br>
+				<i data-ng-show="profilepicture.file.$error.maxSize">File too large 
+				{{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+				<img data-ng-show="profilepicture.file.$valid" ngf-thumbnail="profile.image_file" class="thumb"> <button data-ng-click="profile.image_file = null" data-ng-show="profile.image_file">Remove</button>
+				 <button data-ng-disabled="!profilepicture.$valid" 
+			              data-ng-click="profile.uploadPic(profile.image_file)">Submit</button>
+			      <span class="progress" data-ng-show="profile.profile.image_file.progress >= 0">
+			        <div style="width:{{picFile.progress}}%" 
+			            data-ng-bind="profile.profile.image_file.progress + '%'"></div>
+			      </span>
+			      <span data-ng-show="profile.profile.image_file.result">Upload Successful</span>
+			      <span class="err" data-ng-show="profile.errorMsg">{{errorMsg}}</span>
+			</div> --><!-- <form id="profile-picture" name="profilepicture" data-ng-submit="profile.update_profile_picture()" data-ng-if="!profile.updating">
+
+	<div class="user-profile-image">
+
+		<img data-ng-if="main.storage.profile.profile_image.small" data-ng-src="{{ main.storage.profile.profile_image.small }}" alt="">
+
+	</div>
+
+	<div class="file-input">
+		
+		<input id="img-upload" type="file" onchange="angular.element(this).scope().file_update(this)">
+		<label for="img-upload">
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-publish"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-publish"></use></svg>
+			<span>Select an image</span>
+		</label>
+
+	<button type="submit">Upload new picture</button>
+
+</form> --><form id="lmp-account-edit" class="lmp-form" data-ng-submit="profile.update_profile()" data-ng-if="!profile.updating"><div class="form-item"><input type="text" id="first_name" name="first_name" data-ng-model="profile.profile.first_name"> <label for="first_name">First name</label></div><div class="form-item"><input type="text" id="last_name" name="last_name" data-ng-model="profile.profile.last_name"> <label for="last_name">Last name</label></div><div class="form-item"><input type="email" id="email" name="email" data-ng-model="profile.profile.email"> <label for="email">Email</label></div><!-- 			<div class="form-item">
+				<input type="url" id="facebook" name="facebook" data-ng-model="profile.profile.facebook">
+				<label for="email">Facebook</label>
+			</div>
+
+			<div class="form-item">
+				<input type="url" id="twitter" name="twitter" data-ng-model="profile.profile.twitter">
+				<label for="email">Twitter</label>
+			</div>
+
+			<div class="form-item">
+				<input type="url" id="instagram" name="instagram" data-ng-model="profile.profile.instagram">
+				<label for="email">Instagram</label>
+			</div>
+
+			<div class="form-item">
+				<input type="url" id="url" name="url" data-ng-model="profile.profile.url">
+				<label for="url">Website</label>
+			</div> --><div class="form-item"><textarea id="bio" name="bio" data-ng-model="profile.profile.description"></textarea> <label for="bio">About me</label></div><button type="submit">Update profile</button></form><div data-ng-if="profile.updating" class="form-loader"><span>Loading...</span></div></div></main><data-sidebar></data-sidebar></div>

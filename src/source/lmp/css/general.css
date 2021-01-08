@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'hknova';
+    src: url('/assets/fonts/hknova/HKNova-Regular.woff2') format('woff2'),
+        url('/assets/fonts/hknova/HKNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hknova';
+    src: url('/assets/fonts/hknova/HKNova-SemiBold.woff2') format('woff2'),
+        url('/assets/fonts/hknova/HKNova-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hknova';
+    src: url('/assets/fonts/hknova/HKNova-Medium.woff2') format('woff2'),
+        url('/assets/fonts/hknova/HKNova-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hknova';
+    src: url('/assets/fonts/hknova/HKNova-Bold.woff2') format('woff2'),
+        url('/assets/fonts/hknova/HKNova-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hknova';
+    src: url('/assets/fonts/hknova/HKNova-Light.woff2') format('woff2'),
+        url('/assets/fonts/hknova/HKNova-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+html.fixed {
+	overflow: hidden;
+}
+
+body {
+	font-family: hknova, sans-serif;
+	font-weight: 300;
+	line-height: 28px;
+	font-size: 14px;
+	padding: 116px 0 60px 0;
+	overflow-x: hidden;
+}
+
+p,
+ul,
+ol {
+	margin: 0 0 28px 0;
+}
+
+h1,
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	font-weight: 600;
+	margin: 0 0 28px 0;
+}
+
+h1 {
+	font-size: 32px;
+	line-height: 38px;
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 32px;
+}
+
+h3 {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+h4 {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+h5 {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+h6 {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+a {
+	text-decoration: none;
+	color: #ba4d3d;
+	transition: all .2s;
+	cursor: pointer;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+@media only screen and (max-width:960px) {
+
+	body {
+		padding-top: 56px;
+	}
+
+}
+
+#loading-bar-spinner {
+  display: none;
+}
+
+#loading-bar .bar {
+  background: #ba4d3d;
+  height: 3px;
+}

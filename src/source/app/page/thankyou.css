@@ -1,0 +1,11 @@
+.thank-you .lmp-form {
+	max-width: 500px;
+	margin: 0 auto 60px auto;
+	text-align: center;
+}
+
+.thank-you .lmp-form [vc-recaptcha] {
+	position: relative;
+	width: 300px;
+	margin: 0 auto 24px auto;
+}

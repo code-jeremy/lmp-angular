@@ -1,0 +1,158 @@
+<div class="page-header">
+
+	<div class="wrap">
+
+		<div class="single-track-detail">
+		
+			<h1 data-ng-bind-html="$ctrl.content.title"></h1>
+			<p data-ng-bind-html="$ctrl.content.artists" data-ng-if="$ctrl.content.artists"></p>
+
+		</div>
+
+		<div class="track-artwork">
+			<img data-ng-src="{{ $ctrl.content.artwork }}" data-ng-attr-alt="{{ $ctrl.content.title.rendered }}">
+		</div>
+
+		<button data-ng-attr-data-track-id="{{ ::$ctrl.content.id }}" data-ng-class="{ playing: $ctrl.storage.current.id == $ctrl.content.id && $ctrl.storage.state === 'playing' }" class="lmp-play-large" data-ng-click="$ctrl.toggle_audio()">  
+
+			<span data-ng-bind="$ctrl.storage.current.id == $ctrl.content.id && $ctrl.storage.state === 'playing' ? 'Pause' : 'Play'"></span>
+
+		</button>
+
+	</div>
+
+</div>
+
+<div class="track-stats col-{{ $ctrl.meta_cols }}">
+
+	<div class="wrap">
+
+		<div data-ng-if="$ctrl.content.duration_display">
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-access_time">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-access_time"></use>
+			</svg>
+			<span data-ng-bind="$ctrl.content.duration_display"></span> 
+		</div> 
+
+		<div>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-play_arrow">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-play_arrow"></use>
+			</svg> 
+			<span data-ng-bind="$ctrl.content.plays"></span> 
+		</div> 
+
+		<div> 
+			<svg data-ng-if="$ctrl.content.user_like" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-favorite">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-favorite"></use>
+			</svg>
+			<svg data-ng-if="!$ctrl.content.user_like" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-favorite">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-favorite"></use>
+			</svg> 
+			<span data-ng-bind="$ctrl.content.likes"></span> 
+		</div>
+
+		<share-button content="$ctrl.content" class="ng-isolate-scope">
+			<button class="lmp-share alt" data-ng-click="share.share()">
+				Share
+				<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-share">
+					<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-share"></use>
+				</svg>
+			</button>
+		</share-button>
+
+		<a data-ng-if="$ctrl.content.url && ! $ctrl.content.video" data-ng-href="{{ $ctrl.content.url }}" data-ng-attr-download="{{ $ctrl.content.title }}" target="_self">
+			<span>Download </span>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-file_download">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-file_download"></use>
+			</svg>
+		</a>
+
+		<a data-ng-if="! $ctrl.content.url && $ctrl.content.video" data-ng-href="{{ $ctrl.content.video.mp4 }}" data-ng-attr-download="{{ $ctrl.content.title }}" target="_self">
+			<span>Download </span>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-file_download">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-file_download"></use>
+			</svg>
+		</a>
+
+		<a data-ng-if="$ctrl.content.url && $ctrl.content.video"  data-ng-click="$ctrl.download_options = true">
+			<span>Download </span>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-file_download">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-file_download"></use>
+			</svg>
+		</a>
+
+		<div class="download-options" data-ng-if="$ctrl.download_options">
+			<div class="overlay">
+				<div class="inner">
+					<button class="modal-close" data-ng-click="$ctrl.download_options = false">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-close"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-clear"></use></svg>
+					</button>
+					<a data-ng-href="{{ $ctrl.content.url }}" data-ng-attr-download="{{ $ctrl.content.title }}" target="_self" data-ng-click="$ctrl.download_options = false">
+						Audio
+					</a>
+					<a data-ng-href="{{ $ctrl.content.video.mp4 }}" data-ng-attr-download="{{ $ctrl.content.title }}" target="_self" data-ng-click="$ctrl.download_options = false">
+						Video
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<a data-ng-click="$ctrl.like()" data-ng-class="{ loading: $ctrl.like_loading }">
+			<span data-ng-bind="( $ctrl.content.user_like ? 'Unlike' : 'Like' )"></span>
+			<svg data-ng-if="$ctrl.content.user_like" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-favorite">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-favorite"></use>
+			</svg>
+			<svg data-ng-if="!$ctrl.content.user_like" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-favorite">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-favorite_outline"></use>
+			</svg>
+		</a>
+
+		<!-- <a data-ng-click="$ctrl.add_to_playlist()">
+			<span>Add to playlist </span>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-playlist_add">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-playlist_add"></use>
+			</svg>
+		</a> -->
+		
+	</div>
+
+</div>
+
+
+<div class="wrap">
+ 
+	<main class="lmp-content-left">
+
+		<data-podcast-video data-ng-if="$ctrl.content.video" video="$ctrl.content.video"></data-podcast-video>
+		
+		<div class="track-description" data-ng-if="$ctrl.content.description">
+			<span data-ng-bind-html="$ctrl.content.description | limitTo:$ctrl.description_limit" data-ng-if="$ctrl.content.description"></span>
+			<div class="description-overlay" data-ng-if="$ctrl.description_limit === 180"></div>
+			<a data-ng-click="$ctrl.toggle_description()" data-ng-if="$ctrl.content.description.length > 180" data-ng-bind="$ctrl.description_limit === 180 ? 'Read more' : 'Show less'"></a>
+		</div>
+
+		<comments postid="$ctrl.content.id" type="$ctrl.content.format" count="$ctrl.content.comment_count"></comments>
+
+		<div class="related-tracks" data-ng-if="$ctrl.related.length > 0">
+
+			<h4 class="widget-title">
+				<span>Related tracks</span>
+			</h4>
+
+			<ul class="lmp-track-list">
+
+				<li data-ng-repeat="item in $ctrl.related">  
+
+					<data-single-track track="item"></data-single-track>
+					
+				</li>
+
+			</ul>
+			
+		</div>
+
+	</main>
+
+	<data-sidebar></data-sidebar>
+
+</div>

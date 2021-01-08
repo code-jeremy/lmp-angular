@@ -1,0 +1,55 @@
+.sign-in-prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(27,27,27,0.85);
+    z-index: 20;
+}
+
+.sign-in-prompt .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 280px;
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 10px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 3px;
+    background: #f0f0f0;
+}
+
+.sign-in-prompt h2 {
+    display: block;
+    position: relative;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 23px;
+    text-align: left;
+}
+
+.sign-in-prompt .inner .modal-close {
+    
+}
+
+.sign-in-prompt .inner .modal-close use {
+    fill: #444;
+}
+
+.sign-in-prompt .button {
+    width: calc(50% - 5px);
+    float: left;
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.sign-in-prompt .button.alt {
+    margin-right: 10px;
+    padding-right: 0;
+    padding-left: 0;
+}

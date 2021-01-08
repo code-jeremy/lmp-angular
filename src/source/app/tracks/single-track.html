@@ -1,0 +1,30 @@
+<div class="lmp-track" data-ng-class="{'mobile-view': $ctrl.layout.mobile}">
+	<a data-ng-if="!$ctrl.layout.mobile" data-ng-href="/{{$ctrl.track.format}}/{{$ctrl.track.slug}}" data-ng-attr-title="{{$ctrl.track.title}}">
+		<div class="artwork">
+			<img data-ng-src="{{$ctrl.track.artwork_small}}" data-ng-attr-alt="">
+		</div>
+		<div class="track-identity">
+			<h3 data-ng-bind-html="$ctrl.track.title" data-ng-class="{current: $ctrl.storage.current.id === $ctrl.track.id && !$ctrl.storage.state.loading}"></h3>
+			<p data-ng-bind-html="$ctrl.track.artists"></p>
+		</div>
+	</a>
+
+	<a data-ng-if="$ctrl.layout.mobile" data-ng-attr-data-track-id="{{$ctrl.track.id}}" ng-click="$ctrl.toggle_audio($ctrl.track.id)">
+		<div class="artwork">
+			<img data-ng-src="{{$ctrl.track.artwork_small}}" data-ng-attr-alt="">
+		</div>
+		<div class="track-identity">
+			<h3 data-ng-bind-html="$ctrl.track.title" data-ng-class="{current: $ctrl.storage.current.id === $ctrl.track.id && !$ctrl.storage.state.loading}"></h3>
+			<p data-ng-bind-html="$ctrl.track.artists"></p>
+		</div>
+	</a>
+
+	<button aria-label="Toggle audio track" data-ng-attr-data-track-id="{{$ctrl.track.id}}" data-ng-class="{playing:$ctrl.storage.current.id == $ctrl.track.id && $ctrl.storage.state === 'playing'}" class="lmp-play" data-ng-if="!$ctrl.layout.mobile" ng-click="$ctrl.toggle_audio($ctrl.track.id)">  
+		<svg class="circular" viewBox="25 25 50 50" data-ng-show="$ctrl.storage.loading === $ctrl.track.id">
+			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="10" stroke-miterlimit="10"/>
+		</svg>
+	</button>
+	<button aria-label="View track details" class="lmp-detail" data-ng-click="$ctrl.view_detail($ctrl.data)">  
+		<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-keyboard_control"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-keyboard_control"></use></svg>
+	</button>
+</div>

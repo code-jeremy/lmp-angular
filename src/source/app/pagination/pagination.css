@@ -1,0 +1,202 @@
+.lmp-page-nav {
+	position: relative;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	margin: 40px 0 0 0;
+	height: 70px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+
+.artists .lmp-page-nav,
+.djs .lmp-page-nav {
+	margin: 0;
+	border-bottom: none;
+}
+
+.lmp-page-nav:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.lmp-page-nav ul {
+	margin: 0;
+}
+
+.lmp-page-nav li {
+	display: inline-block;
+	line-height: 70px;
+}
+
+.lmp-page-nav li a,
+.lmp-page-nav li span {
+	display: inline-block;
+	line-height: 36px;
+	min-width: 36px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #454545;
+	border: 1px solid #e0e0e0;
+	border-radius: 2px;
+	margin: 0px 2px 0 2px;
+	vertical-align: middle;
+	position: relative;
+	top: -3px;
+}
+
+.lmp-page-nav li a {
+	color: #ba4d3d;
+	cursor: pointer;
+}
+
+.lmp-page-nav li a:hover {
+	background: #ba4d3d;
+	color: #fff;	
+}
+
+.lmp-page-nav li span {
+	border-color: #e5e5e5;
+	color: #c0c0c0;
+}
+
+.lmp-page-nav > a {
+	display: block;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	float: left;
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+}
+
+.lmp-page-nav > a.first,
+.lmp-page-nav > a.previous {
+	border-right: 1px solid #e0e0e0;
+}
+
+.lmp-page-nav > a.first {
+	left: 0;
+}
+
+.lmp-page-nav > a.previous {
+	left: 70px;
+}
+
+.lmp-page-nav.basic > a.previous {
+	left: 0;
+}
+
+.lmp-page-nav > a.next,
+.lmp-page-nav > a.last {
+	border-left: 1px solid #e0e0e0;
+}
+
+.lmp-page-nav > a.next {
+	right: 70px;
+}
+
+.lmp-page-nav.basic > a.next {
+	right: 0;
+}
+
+.lmp-page-nav > a.last {
+	right: 0;
+}
+
+.lmp-page-nav svg {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -9px 0 0 -9px;
+	transition: all .4s;
+}
+
+.lmp-page-nav svg use {
+	fill: #ba4d3d;
+}
+
+.lmp-page-nav > a.first svg:first-of-type,
+.lmp-page-nav > a.last svg:first-of-type {
+	margin-left: -12px; 
+}
+
+.lmp-page-nav > a.first svg:last-of-type,
+.lmp-page-nav > a.last svg:last-of-type {
+	margin-left: -6px!important; 
+}
+
+.lmp-page-nav > a:hover svg {
+	transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+}
+
+.lmp-page-nav > a.inactive {
+	pointer-events: none;
+}
+
+.lmp-page-nav > a.inactive svg use {
+	fill: #b0b0b0;
+}
+
+.lmp-page-nav > a.inactive:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (max-width:768px) {
+
+	.lmp-page-nav {
+		position: relative;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+		margin: -1px 0 20px 0;
+		height: 50px;
+		text-align: center;
+	}
+
+	.lmp-page-nav ul {
+		display: none;
+	}
+
+	.lmp-page-nav > a {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.lmp-page-nav > a.previous {
+		left: 50px;
+	}
+
+	.lmp-page-nav > a.next {
+		right: 50px;
+	}
+
+	.lmp-page-nav.basic > a.previous {
+		left: 0;
+	}
+
+	.lmp-page-nav.basic > a.next {
+		right: 0;
+	}
+
+}
+
+
+.main-article .lmp-page-nav {
+    margin-top: 0;
+    margin-bottom: 10px;
+}

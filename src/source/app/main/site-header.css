@@ -1,0 +1,442 @@
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #2d2d2d;
+	z-index: 10;
+}
+
+.site-title {
+	display: inline-block;
+	line-height: 0;
+	height: 46px;
+	width: auto;
+	margin: 15px 0 15px 20px;
+}
+
+.site-title img {
+	height: 100%;
+	width: auto;
+}
+
+.site-header a {
+	cursor: pointer;
+}
+
+@media only screen and (min-width:961px) {
+
+	.site-header {
+		padding: 40px 0 0 0;
+		height: 116px;
+	}
+
+	.site-header.ng-animate {
+		transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	}
+
+	.site-header:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 40px;
+		left: 0;
+		top: 0;
+		position: absolute;
+		background: #202020;
+	}
+
+	.toggle-menu {
+		display: none;
+	}
+
+	.site-nav {
+		float: right;
+	}
+
+	.site-header ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.site-header li {
+		list-style-type: none;
+	}
+
+	.secondary {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: auto;
+		height: 40px;
+		line-height: 40px;
+	}
+
+	.secondary li {
+		display: inline-block;
+		line-height: 40px;
+	    vertical-align: top;
+	}
+
+	.secondary li a {
+		font-size: 10px;
+		letter-spacing: 0.5px;
+		padding: 0 12px;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #e0e0e0;
+	}
+
+	.secondary li > span, 
+	.secondary li > a svg {
+	    width: 12px;
+	    height: 12px;
+	}
+
+	.secondary li > a svg use {
+	    fill:#fff;
+	}
+
+	.primary {
+		float: right;
+		display: block;
+	}
+
+	.site-header a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.social {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.social li {
+		display: block;
+		float: left;
+		position: relative;
+		text-align: center;
+	}
+
+	.social li a {
+		display: block;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		border-right: 1px solid #2d2d2d;
+	}
+
+	.social li a svg {
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+	}
+
+	.social li a svg use {
+		fill: #f0f0f0;
+	}
+
+	.primary {
+		background: #2d2d2d;
+	}
+
+	.primary li {
+		float: left;
+		position: relative;
+		line-height: 76px;
+	}
+
+	.primary > li > span, 
+	.primary > li > a {
+		display: block;
+		padding: 0 24px;
+		text-transform: uppercase;
+		font-size: 11px;
+		letter-spacing: 1px;
+		position: relative;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+		cursor: pointer;
+	}
+
+	.primary li span:hover,
+	.primary li span.active,
+	.primary li a:hover,
+	.primary li a.active {
+		background: rgba(255,255,255,0.02);
+	}
+
+	.primary > li > span:before,
+	.primary > li > a:before {
+		content: "";
+		display: block;
+		height: 2px;
+		width: 0;
+		background: #d4422f;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		transition: all .3s;
+	}
+
+	.primary li:hover > span:hover:before,
+	.primary li.active > span:before,
+	.primary li:hover > a:before,
+	.primary li.active > a:before {
+		width: 100%;
+	}
+
+	.site-header.small {
+		top: -40px;
+		height: 100px;
+	}
+
+	.site-header.small .primary li {
+		line-height: 60px;
+	}
+
+	.site-header.small .site-title {
+		margin: 10px 0 10px 20px;
+		height: 40px;
+	}
+
+	li.user-li > a.ng-animate {
+		transition: none;
+	}
+
+	li.user-li > a {
+		background: #404040;
+		padding-left: 42px
+	}
+
+	li.user-li > a svg:nth-of-type(1) {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: 16px;
+		top: 50%;
+		margin-top: -12px;
+	}
+
+	li.user-li > a svg:nth-of-type(2) {
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		margin-top: -10px;
+	}
+
+	li.user-li > a svg use {
+		fill: #fff;
+	}
+
+	.mobile-user-toggle {
+		display: none;
+	}
+
+	.primary ul {
+		z-index: -1;
+	    display: block;
+	    width: 160px;
+	    position: absolute;
+	    top: 100%;
+	    background: #3e3e3e;
+	    box-shadow: 0 0 3px rgba(27,27,27,0.4)
+	}
+
+	.primary ul li {
+	    display: block;
+	    width: 100%;
+	    border-bottom :1px solid #464646;
+	}
+
+	.primary ul li a {
+	    display: block;
+	    line-height: 50px;
+	    padding: 0 24px;
+	    text-transform: uppercase;
+	    font-size: 10px;
+	    font-weight: 500;
+	    letter-spacing: 1px;
+	}
+
+	.primary > li > ul {
+		transition: all .4s;
+		top: -500%;
+	}
+
+	.primary > li:hover > ul {
+		top: 100%;
+	}
+
+
+}
+
+@media only screen and (max-width:960px) {
+
+	.site-title {
+		display: inline-block;
+		line-height: 0;
+		height: 36px;
+		width: auto;
+		margin: 10px;
+	}
+
+	.toggle-menu {
+		position: absolute;
+		right: 56px;
+		background: none;
+		border: none;
+		padding: 0;
+		height: 56px;
+		width: 56px;
+	}
+
+	.toggle-menu svg {
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -12px 0 0 -12px;
+	}
+
+
+	.toggle-menu svg.icon-close {
+		width: 14px;
+		height: 14px;
+		margin: -7px 0 0 -7px;
+	}
+
+	.toggle-menu svg use {
+		fill: #fff;
+	}
+
+	.site-nav {
+		position: fixed;
+		top: 56px;
+		left: 0;
+		width: 280px;
+		bottom: 0;
+		background: #f7f7f7;
+		box-shadow: 10px 0 10px -10px #000;
+		z-index: 1;
+		font-weight: 600;
+	}
+
+	.site-nav > div {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.site-nav ul {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.site-nav li {
+		display: block;
+	}
+
+	.site-nav li a,
+	.site-nav li span {
+		display: block;
+		color: #444;
+		border-bottom: 1px solid #e5e5e5;
+		padding: 10px 10px;
+	}
+	
+	.site-nav li ul a {
+		padding-left: 30px;
+		background: rgba(255,255,255,0.03);
+	}
+
+	.site-nav .social {
+		display: none;
+	}
+
+	.site-nav.ng-hide-add, .site-nav.ng-hide-remove {
+		transition: 0s linear all;
+	}
+
+	.site-nav.ng-hide-add-active,
+	.site-nav.ng-hide-remove-active {
+		transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+	}
+
+	.site-nav.ng-hide-add {
+		left: 0;
+	}
+
+	.site-nav.ng-hide-add.ng-hide-add-active {
+		left: -100%;
+	}
+
+	.site-nav.ng-hide-remove {
+		left: -100%;
+	}
+
+	.site-nav.ng-hide-remove.ng-hide-remove-active {
+		left: 0;
+	}
+
+	.mobile-user-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		width: 56px;
+		height: 56px;
+		font-size: 0;
+	}
+
+	.mobile-user-toggle svg {
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -12px 0 0 -12px;
+	}
+
+	.mobile-user-toggle svg.icon-close {
+		width: 14px;
+		height: 14px;
+		margin: -7px 0 0 -7px;
+	}
+
+	.mobile-user-toggle svg use {
+		fill: #fff;
+	}
+
+	.user-li {
+		display: none!important;
+	}
+
+}
+
+.user-li.ng-animate,
+.user-li a.ng-animate,
+.mobile-user-toggle.ng-animate {
+	transition: none!important;
+}
+
+.lmp-instant-search-toggle:hover {
+	background: none!important;
+}

@@ -1,0 +1,52 @@
+.rp-device-header h2 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.rp-device-header p {
+  margin: 0 0 10px 0;
+}
+
+.rp-device {
+  position: relative;
+  box-shadow: 0 3px 6px rgba(27,27,27,.08);
+  min-height: 65px;
+  padding: 6px 10px 0 80px!important;
+  border: 1px solid #f0f0f0;
+  margin: 0 0 20px 0;
+}
+
+.rp-device svg { 
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+}
+
+.rp-device svg path {
+  fill: #555;
+}
+
+.rp-device h3 {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.rp-device button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rp-device p {
+  margin: 0;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.rp-device-header h2 + p {
+  margin-top: -10px;
+}

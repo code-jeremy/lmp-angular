@@ -1,0 +1,31 @@
+<div class="page-header" data-ng-if="! $ctrl.content.header || $ctrl.content.youtube.length > 0">
+	<div class="wrap">
+		<h1 data-ng-bind-html="$ctrl.content.title"></h1>
+	</div>
+</div>
+<div class="page-header image-header" data-ng-if="$ctrl.content.header && $ctrl.content.youtube.length < 1" data-ng-style="{ background: '#252525 url(' + $ctrl.content.header + ') no-repeat center center / cover' }">
+	<div class="wrap">
+		<h1 data-ng-bind-html="$ctrl.content.title"></h1>
+	</div>
+</div>
+<div class="article-stats">
+	<div class="wrap">
+		<div>
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-calendar-o">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-calendar-o"></use>
+			</svg>
+			<span data-ng-bind="$ctrl.content.display_date"></span> 
+		</div> 
+		<share-button content="$ctrl.content"></share-button>
+	</div>
+</div>
+<div class="wrap">
+	<main class="lmp-content-left">
+		<div class="lmp-video-wrap" data-ng-repeat="item in $ctrl.content.youtube track by $index" data-ng-if="$ctrl.content.youtube.length > 0">
+			<iframe data-ng-src="{{ item }}" allowfullscreen="true"></iframe>
+		</div>
+		<div data-ng-bind-html="$ctrl.content.content" data-ng-if="$ctrl.content.content"></div>
+		<comments post-id="'track-' + $ctrl.content.id" post-type="'post'" count="$ctrl.content.comment_count"></comments>
+	</main>
+	<data-sidebar></data-sidebar>
+</div>

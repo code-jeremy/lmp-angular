@@ -1,0 +1,142 @@
+.lmp-artists {
+	position: relative;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: -40px;
+}
+
+.artists-header {
+	background: #ba4d3d;
+	float: left;
+	position: relative;
+	width: 40%;
+	height: 0;
+	padding-bottom: 20%;
+}
+
+.artists-header h1 {
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+}
+
+.lmp-artist {
+	display: block;
+	float: left;
+	position: relative;
+	width: 20%;
+	padding-bottom: 20%;
+	height: 0;
+}
+
+.lmp-artist a {
+	display: block;
+	height: 0;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	position:  absolute;
+	top:  0;
+	left: 0;
+}
+
+.lmp-artist h2 {
+	position: absolute;
+	color: #fff;
+	font-size: 16px;
+	display: block;
+	background: rgba(27,27,27,0.85);
+	width: calc(100% + 80px);
+	bottom: 0;
+	padding: 16px 60px 60px;
+	margin: 0 0 -40px -40px;
+	transform: rotate(-1deg);
+}
+
+@media only screen and (max-width:1400px) {
+
+	.artists-header {
+		width: 25%;
+		padding-bottom: 25%;
+	}
+
+	.lmp-artist {
+		width: 25%;
+		padding-bottom: 25%;
+	}
+
+}
+
+@media only screen and (max-width:960px) {
+
+	.artists-header {
+		width: 100%;
+		padding: 20px;
+		height: auto;
+	}
+
+	.artists-header h1 {
+		position: relative;
+		left: auto;
+		bottom: auto;
+	} 
+
+	.lmp-artist {
+		width: 33.333333333%;
+		padding-bottom: 33.333333333%;
+	}
+
+	.lmp-artist h2 {
+		font-size: 14px;
+		line-height: 24px;
+		padding: 10px 40px 30px 40px;
+		margin: 0 0 -20px -29px;
+		width: calc(100% + 60px);
+	}
+
+}
+
+@media only screen and (max-width:768px) {
+
+	.artists-header {
+		width: 100%;
+		padding: 20px 10px;
+	}
+
+}
+
+@media only screen and (max-width:600px) {
+
+	.lmp-artist {
+		width: 50%;
+		padding-bottom: 50%;
+	}
+
+}
+
+@media only screen and (max-width:380px) {
+
+	.lmp-artist h2 {
+		font-size: 12px;
+		line-height: 22px;
+	}
+
+}
+
+.main-artists .lmp-page-nav,
+.main-djs .lmp-page-nav {
+	width: 100%;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+}
+
+
+.main-artists .site-footer,
+.main-djs .site-footer {
+	margin-top: -1px;
+}

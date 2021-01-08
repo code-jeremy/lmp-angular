@@ -1,0 +1,42 @@
+<div class="page-header" page-header data-ng-class="{ fixed: page_header.class }">
+	<div class="wrap">
+		<h1>Videos</h1>
+	</div>
+</div>
+<div class="wrap">
+	<main class="lmp-content-left">
+		<div class="lmp-video-wrap">
+			<iframe data-ng-src="{{ $ctrl.list[$ctrl.current].embed_url }}" allowfullscreen="true"></iframe>
+		</div>
+		<div class="lmp-video-meta">
+			<h2 data-ng-bind="$ctrl.list[$ctrl.current].title"></h2>
+			<div clasd="video-description" data-ng-if="$ctrl.list[$ctrl.current].description" data-ng-bind-html="$ctrl.list[$ctrl.current].description"></div>
+			<span class="video-detail-item video-duration">
+				<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-access_time"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-access_time"></use></svg>
+				<span data-ng-bind="$ctrl.list[$ctrl.current].duration | seconds_to_time"></span>
+			</span>
+			<span class="video-detail-item video-plays">
+				<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-play_arrow"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-play_arrow"></use></svg> 
+				<span data-ng-bind="$ctrl.list[$ctrl.current].views_total"></span>
+			</span>
+		</div>
+		<ul class="lmp-video-list">
+			<li data-ng-repeat="item in $ctrl.list">
+				<a data-ng-click="$ctrl.play_video( $index )" data-ng-style="{ background: '#252525 url(' + item.thumbnail_720_url + ') no-repeat center center / cover' }"></a>
+				<a data-ng-click="video.play_video(item)">
+					<h3 data-ng-bind="item.title"></h3>
+					<span class="video-detail-item video-duration">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-access_time"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-access_time"></use></svg>
+						<span data-ng-bind="item.duration | seconds_to_time"></span>
+					</span>
+					<span class="video-detail-item video-plays">
+						<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-play_arrow"><use xlink:href="/assets/img/icons/symbol-defs.svg#icon-play_arrow"></use></svg> 
+						<span data-ng-bind="item.views_total"></span>
+					</span>
+				</a>
+			</li>
+		</ul>
+		<data-pagination page="$ctrl.page" pages="$ctrl.pages" basic="true"></data-pagination>
+	</main>
+	<data-sidebar></data-sidebar>
+</div>

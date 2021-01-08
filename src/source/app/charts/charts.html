@@ -1,0 +1,17 @@
+<div class="page-header">
+	<div class="wrap">
+		<h1>Charts</h1>
+	</div>
+</div>
+<div class="wrap">
+	<main class="lmp-content-left">
+		<ul class="lmp-charts">
+			<li data-ng-repeat="item in $ctrl.content">
+				<a data-ng-href="/charts/{{ item.slug }}" data-ng-attr-title="{{ item.title }}">
+					<div class="chart-artwork" data-ng-style="{ background: '#252525 url(' + item.artwork_large + ') no-repeat center center / cover' }"></div>
+				</a>	
+			</li>
+		</ul>
+	</main>
+	<data-sidebar></data-sidebar>
+</div>

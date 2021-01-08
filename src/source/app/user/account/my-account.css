@@ -1,0 +1,75 @@
+.lmp-account-tabs {
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+.lmp-account-tabs button {
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #444;
+    position: relative;
+}
+
+.lmp-account-tabs button.active:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #ba4d3d;   
+}
+
+/*.form-item {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+#lmp-account-edit input,
+#lmp-account-edit textarea {
+    padding: 30px 12px 12px;
+    background: #fafafa;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    color: #444;
+    transition: all .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#lmp-account-edit label {
+    top: 5px;
+    position: absolute;
+    display: block;
+    padding: 0 12px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    letter-spacing: 0.5px;
+    color: #a0a0a0;
+}
+
+#lmp-account-edit textarea:focus,
+#lmp-account-edit input:focus {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-top: 31px;
+}
+
+#lmp-account-edit textarea:focus ~ label,
+#lmp-account-edit input:focus ~ label {
+    top: 0;
+    color: #444;
+    padding: 0;
+    color: #ba4d3d;
+}*/
+
+#profile-picture img {
+    width: 120px;
+    height: 120px;
+}

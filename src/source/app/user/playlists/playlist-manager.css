@@ -1,0 +1,63 @@
+.delete-track {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin: -10px 0 0 0;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.delete-track svg {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -5px 0 0 -5px;
+}
+
+.delete-track svg use {
+    fill: #fff;
+}
+
+#sort-list li:hover .delete-track {
+    opacity: 1;
+    z-index: 1;
+}
+
+#sort-list .artwork {
+    transition: opacity .2s;
+}
+
+#sort-list .artwork:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f0f0f0;
+    opacity: 0;
+    transition: all .35s;
+    transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+}
+
+#sort-list li:hover .artwork:before {
+    opacity: 1;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.main-user-playlist .lmp-track-list li:hover {
+    box-shadow: 0 0 10px rgba(27,27,27,0.4);
+    background: rgba(255,255,255,08);
+}

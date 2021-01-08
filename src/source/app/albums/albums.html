@@ -1,0 +1,22 @@
+<div class="page-header" page-header data-ng-class="{ fixed: page_header.class }">
+	<div class="wrap">
+		<h1>Albums</h1>
+	</div>
+</div>
+<div class="wrap">
+	<main class="lmp-content-left">
+		<ul class="lmp-album-list">
+			<li data-ng-repeat="item in $ctrl.content.content">
+				<a data-ng-href="/albums/{{item.slug}}">
+					<div class="artwork">
+						<img data-ng-src="{{item.artwork}}" alt="">
+					</div>
+					<h3 data-ng-bind-html="item.title"></h3>
+					<p data-ng-bind-html="item.artists" data-ng-if="item.artists"></p>
+				</a>
+			</li>
+		</ul>
+		<data-pagination page="$ctrl.content.page" pages="$ctrl.content.pages"></data-pagination>
+	</main>
+	<data-sidebar></data-sidebar>
+</div>

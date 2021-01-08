@@ -1,0 +1,40 @@
+<div data-ng-attr-id="gallery-{{ $ctrl.source.columns }}" class="gallery gallery-columns-{{ $ctrl.source.columns }}">
+	<dl class="gallery-item" data-ng-repeat="image in $ctrl.source.images track by $index">
+		<dt class="gallery-icon">
+			<a data-ng-click="$ctrl.open( $index )">
+				<img data-ng-src="{{ image.artwork_large }}" alt="">
+			</a>
+		</dt>
+	</dl>
+</div>
+
+<div class="lmp-gallery-modal" data-ng-if="$ctrl.modal">
+
+	<div class="lmp-gallery-overlay"></div>
+
+	<div class="lmp-gallery-inner">
+		<img data-ng-src="{{ $ctrl.source.images[$ctrl.active].artwork_large }}" alt="">
+		<svg class="circular" viewbox="25 25 50 50">
+			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+		</svg>
+	</div>
+
+	<a class="lmp-gallery-close" data-ng-click="$ctrl.close()">
+		<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-clear">
+			<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-clear"></use>
+		</svg>
+	</a>
+	<div class="lmp-gallery-nav" data-ng-if="$ctrl.source.images.length > 1">
+		<a data-ng-click="$ctrl.nav( 'prev' )">
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-keyboard_arrow_left">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-keyboard_arrow_left"></use>
+			</svg>
+		</a>
+		<a data-ng-click="$ctrl.nav( 'next' )">
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-keyboard_arrow_right">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-keyboard_arrow_right"></use>
+			</svg>
+		</a>
+	</div>
+
+</div>

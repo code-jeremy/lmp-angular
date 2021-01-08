@@ -1,0 +1,230 @@
+main .gallery {
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+main .gallery dl {
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 499px) {
+
+    main .gallery dl {
+        width: calc((100% - 10px) / 2);
+    }
+
+    main .gallery dl:nth-child(2n) {
+        margin-right: 0;
+    }
+
+}
+
+@media only screen and (min-width: 500px) {
+
+    .gallery-columns-2 dl {
+        width: calc((100% - 10px) / 2);
+    }
+
+    .gallery-columns-2 dl:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .gallery-columns-3 dl {
+        width: calc((100% - 20px) / 3);
+    }
+
+    .gallery-columns-3 dl:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .gallery-columns-4 dl {
+        width: calc((100% - 30px) / 4);
+    }
+
+    .gallery-columns-4 dl:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    .gallery-columns-5 dl {
+        width: calc((100% - 40px) / 5);
+    }
+
+    .gallery-columns-5 dl:nth-child(5n) {
+        margin-right: 0;
+    }
+
+}
+
+@media only screen and (min-width: 960px) {
+
+    .gallery-columns-6 dl {
+        width: calc((100% - 50px) / 6);
+    }
+
+    .gallery-columns-6 dl:nth-child(6n) {
+        margin-right: 0;
+    }
+
+    .gallery-columns-7 dl {
+        width: calc((100% - 60px) / 7);
+    }
+
+    .gallery-columns-7 dl:nth-child(7n) {
+        margin-right: 0;
+    }
+
+    .gallery-columns-8 dl {
+        width: calc((100% - 70px) / 8);
+    }
+
+    .gallery-columns-8 dl:nth-child(8n) {
+        margin-right: 0;
+    }
+
+    .gallery-columns-9 dl {
+        width: calc((100% - 80px) / 9);
+    }
+
+    .gallery-columns-9 dl:nth-child(9n) {
+        margin-right: 0;
+    }
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 959px) {
+
+    .gallery-columns-6 dl,
+    .gallery-columns-7 dl,
+    .gallery-columns-8 dl,
+    .gallery-columns-9 dl {
+        width: calc((100% - 40px) / 5);
+    }
+
+    .gallery-columns-6 dl:nth-child(5n)
+    .gallery-columns-7 dl:nth-child(5n)
+    .gallery-columns-8 dl:nth-child(5n),
+    .gallery-columns-9 dl:nth-child(5n) {
+        margin-right: 0;
+    }
+
+}
+
+main .gallery a {
+    display: block;
+    overflow: hidden;
+    line-height: 0;
+}
+
+main .gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.lmp-gallery-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000000000;
+}
+
+.lmp-gallery-modal.ng-enter,
+.lmp-gallery-modal.ng-leave,
+.lmp-gallery-modal.ng-enter .lmp-gallery-overlay,
+.lmp-gallery-modal.ng-leave .lmp-gallery-overlay {
+	transition: all .4s;
+}
+
+.lmp-gallery-modal.ng-enter .lmp-gallery-overlay,
+.lmp-gallery-modal.ng-leave.ng-leave-active .lmp-gallery-overlay {
+	opacity: 0;
+}
+
+.lmp-gallery-modal.ng-leave .lmp-gallery-overlay,
+.lmp-gallery-modal.ng-enter.ng-enter-active .lmp-gallery-overlay {
+	opacity: 1;	
+}
+
+.lmp-gallery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(27,27,27,0.75);
+}
+
+.lmp-gallery-modal .circular {
+	z-index: -1;
+}
+
+.lmp-gallery-modal .circular circle {
+	stroke: #fff!important;
+}
+
+.lmp-gallery-inner {
+	position: absolute;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+	width: 100%;
+	max-width: 1024px;
+	height: 100%;
+	transform: translate(-50%,-50%);
+	z-index: 2;	
+}
+
+.lmp-gallery-inner img {
+	width: 100%;
+	height: auto;
+	position: relative;	
+	vertical-align: middle;
+}
+
+.lmp-gallery-close {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 100;
+}
+
+.lmp-gallery-modal svg use {
+	fill: #fff;
+}
+
+.lmp-gallery-modal svg {
+	width: 32px;
+	height: 32px;
+}
+
+.lmp-gallery-nav {
+	position: fixed;
+	top: 50%;
+	width: 100%;
+	height: 50px;
+	transform: translateY(-50%);
+	z-index: 100;
+}
+
+.lmp-gallery-nav a {
+	position: absolute;
+	height: 50px;
+	line-height: 50px;
+}
+
+.lmp-gallery-nav a:first-child {
+	left: 20px;
+}
+
+.lmp-gallery-nav a:last-child {
+	right: 20px;
+}

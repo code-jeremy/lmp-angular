@@ -1,0 +1,85 @@
+.form-item {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+.lmp-form input,
+.lmp-form textarea {
+    padding: 30px 12px 12px;
+    background: #fafafa;
+    color: #444;
+    transition: all .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.lmp-form label {
+    top: 5px;
+    position: absolute;
+    display: block;
+    padding: 0 12px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    transition: all .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    color: #777;
+}
+
+.lmp-form textarea:focus,
+.lmp-form input:focus {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    margin-top: 31px;
+}
+
+.lmp-form textarea:focus ~ label,
+.lmp-form input:focus ~ label {
+    top: 0;
+    color: #444;
+    padding: 0;
+    color: #ba4d3d;
+}
+
+.lmp-form-message {
+    background: #f0f0f0;
+    font-weight: 600;
+    padding: 12px 18px;
+    margin: 0 0 24px 0;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: left;
+}
+
+.file-input input[type=file] {
+    position:  absolute;
+    left: -10000px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.file-input label {
+    display: inline-block;
+    background: #ba4d3d;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 7px 20px 5px 40px;
+    border-radius: 2px;
+}
+
+.file-input svg {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 15px;
+    top: 11px;
+}
+
+.file-input use {
+    fill: #fff;
+}
+
+[vc-recaptcha] {
+    margin-bottom: 24px;
+}

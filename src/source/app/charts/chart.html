@@ -1,0 +1,29 @@
+<div class="page-header">
+
+	<div class="wrap">
+
+		<h1 data-ng-bind="$ctrl.content.title"></h1>
+
+	</div>
+
+</div>
+
+<div class="wrap">
+
+	<main class="lmp-content-left">
+
+		<ul class="lmp-track-list chart-list">
+
+			<li data-ng-repeat="item in $ctrl.content.tracks">
+
+				<data-single-track track="item" layout="layout"></data-single-track>
+				
+			</li>
+
+		</ul>
+
+	</main>
+
+	<data-sidebar></data-sidebar>
+
+</div>

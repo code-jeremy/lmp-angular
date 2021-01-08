@@ -1,0 +1,267 @@
+a.lmp-instant-search-toggle {
+    padding: 0 24px;
+    position: relative;
+    width: 76px;
+    height: 76px;
+    display:  block;
+    padding: 0 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a.lmp-instant-search-toggle svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -21px;
+}
+
+@media only screen and (max-width: 960px) {
+    a.lmp-instant-search-toggle {
+        width: 100%;
+        height: auto;
+    }
+    a.lmp-instant-search-toggle:before {
+        content: 'Search';
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 14px
+    }
+
+    a.lmp-instant-search-toggle svg {
+        display: none;
+    }
+}
+a.lmp-instant-search-toggle svg use {
+    fill: #fff;
+}
+
+.small a.lmp-instant-search-toggle {
+    height: 60px;
+}
+
+.lmp-instant-search-results {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 260px;
+    background: #333;
+    box-shadow: 0 0 10px #000;
+    z-index: 100;
+}
+
+.lmp-instant-search-results.ng-enter,
+.lmp-instant-search-results.ng-leave,
+.lmp-instant-search-results.ng-enter .lmp-instant-search-overlay,
+.lmp-instant-search-results.ng-leave .lmp-instant-search-overlay {
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+}
+
+.lmp-instant-search-results.ng-enter,
+.lmp-instant-search-results.ng-leave.ng-leave-active {
+    right: -100%;
+}
+
+.lmp-instant-search-results.ng-leave,
+.lmp-instant-search-results.ng-enter.ng-enter-active {
+    right: 0;   
+}
+
+.lmp-instant-search-results.ng-enter .lmp-instant-search-overlay,
+.lmp-instant-search-results.ng-leave.ng-leave-active .lmp-instant-search-overlay {
+    opacity: 0;
+}
+
+.lmp-instant-search-results.ng-leave .lmp-instant-search-overlay,
+.lmp-instant-search-results.ng-enter.ng-enter-active .lmp-instant-search-overlay {
+    opacity: 1;
+}
+
+.lmp-instant-search-overlay {
+    position: fixed!important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(27,27,27,0.85);
+    z-index: -1;
+}
+
+a.lmp-close-instant-search {
+    display: block;
+    padding: 4px 0 0 0;
+    text-align: center;
+    background: #3e3e3e;
+    cursor: pointer;
+    transition: all .2s;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    height: 50px;
+    line-height: 46px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+a.lmp-close-instant-search svg {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 12px;
+    top: 19px;
+}
+
+a.lmp-close-instant-search svg use {
+    fill: #e0e0e0;
+}
+
+.lmp-instant-search-input {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 70px!important;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #2b2b2b;
+    z-index: 20;
+}
+
+.lmp-instant-search-input input[type=text] {
+    width: 100%!important;
+    padding-left: 0px;
+    margin: 0;
+    vertical-align: top;
+    background: #3e3e3e;
+    border: 1px solid #191919;
+    box-shadow: inset 0 0 5px #202020;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 30px;
+    color: #fff;
+}
+
+.lmp-instant-search-input svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 25px;
+    right: 18px;
+}
+
+.lmp-instant-search-input svg use {
+    fill: #777
+}
+
+.primary .lmp-instant-search-results ul {
+    z-index: 0;
+    position: relative;
+    float: none;
+    width: 100%;
+    background: none;
+    box-shadow: none!important;
+}
+
+.lmp-instant-search-results li {
+    display: block;
+    position: relative;
+    height: 66px;
+    border: none!important;
+}
+
+.lmp-instant-search-results li a {
+    display: block;
+    line-height: 0;
+    text-transform: none;
+    letter-spacing: 0;
+    display: block;
+    height: 56px;
+    padding: 0!important;
+    position: relative;
+    border: none!important;
+    color: #fff!important;
+}
+
+.lmp-instant-search-results li a:hover {
+    background: #363636!important;
+}
+
+.lmp-instant-search-results li img {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+
+.lmp-instant-search-results li h5 {
+    display: block;
+    padding: 0 10px 0 75px;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: 0px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lmp-instant-search-scroll {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height: calc(100% - 120px);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background: #3e3e3e;
+    z-index: 10;
+}
+
+.lmp-instant-search-scroll div > a {
+    line-height: 20px!important;
+    height: auto;
+    display:  none;
+}
+
+data-instant-search h4.widget-title  {
+    font-size: 10px;
+    color: #a0a0a0;
+    width: calc(100% - 20px);
+    margin: 10px 0 5px 10px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #fff!important;
+}
+
+data-instant-search h4.widget-title span {
+    color: #a0a0a0!important;
+}
+
+data-instant-search h4.widget-title span {
+    background: #3e3e3e;
+    border: none!important;
+}
+
+data-instant-search h4.widget-title:before {
+    background: #a0a0a0;
+    top: 14px;
+    height: 1px;
+}
+

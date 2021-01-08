@@ -1,0 +1,9 @@
+.article-stats .delete-playlist {
+	float: right;
+	position: relative;
+	right: auto;
+}
+
+.article-stats .delete-playlist svg {
+	left: auto;
+}

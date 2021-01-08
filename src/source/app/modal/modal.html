@@ -1,0 +1,28 @@
+<div class="lmp-modal">
+
+	<div class="overlay" data-ng-click=""></div>
+
+	<div class="inner">
+
+		<p data-ng-bind="lmp_modal.message" data-ng-if="!lmp_modal.loading"></p>
+
+		<div class="lmp_modal-decisions" data-ng-if="lmp_modal.decide">
+			<button data-ng-click="lmp_modal.cancel( false )">
+				Cancel
+			</button>
+			<button data-ng-click="lmp_modal.confirm()">
+				Confirm
+			</button>
+		</div>
+
+		<button data-ng-if="! lmp_modal.decide" class="modal-close" data-ng-click="lmp_modal.close( false );">
+			<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-close">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#icon-clear"></use>
+			</svg>
+		</button>
+
+		<div class="loader-wrap" data-ng-if="lmp_modal.loading"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/></svg></div>
+
+	</div>
+
+</div>

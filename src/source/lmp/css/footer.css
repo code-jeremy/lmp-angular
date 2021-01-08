@@ -1,0 +1,80 @@
+.site-footer {
+	background: #f7f7f7;
+	border-top: 1px solid #e5e5e5;
+	padding: 60px 0;
+	text-align: center;
+	margin: 40px 0 0 0;
+	color: #717171;
+}
+
+.lmp-legal {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.lmp-legal li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.lmp-legal a {
+	color: #656565;
+	display: block;
+	padding: 0 12px;
+}
+
+.lmp-social {
+	margin: 36px 0;
+}
+
+.lmp-social li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 4px;
+}
+
+.lmp-social a {
+	display: block;
+	text-align: center;
+	height: 54px;
+	line-height: 54px;
+	width: 54px;
+	background: #ba4d3d;
+	border-radius: 50%;
+}
+
+.lmp-social svg {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.lmp-social svg use {
+	fill: #f7f7f7;
+}
+
+.site-footer .wrap > :last-child {
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 580px) {
+
+	.site-footer {
+		padding: 30px 0;
+	}
+
+	.lmp-legal li {
+		display: block;
+	}
+
+	.lmp-legal li a {
+		padding: 6px 12px;
+	}
+
+	.lmp-social {
+		margin: 20px 0;
+	}
+
+}

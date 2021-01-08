@@ -1,0 +1,31 @@
+<div class="page-header" page-header data-ng-class="{ fixed: page_header.class }">
+
+	<div class="wrap">
+
+		<h1>My favorites</h1>
+
+	</div>
+
+</div>
+
+<div class="wrap">
+
+	<main class="lmp-content-left">
+
+		<ul class="lmp-track-list">
+
+			<li data-ng-repeat="item in $ctrl.data.content">
+
+				<data-single-track track="item" layout="layout"></data-single-track>
+				
+			</li>
+
+		</ul>
+
+		<data-pagination page="$ctrl.data.page" pages="$ctrl.data.pages"></data-pagination>
+
+	</main>
+
+	<data-sidebar></data-sidebar>
+
+</div>

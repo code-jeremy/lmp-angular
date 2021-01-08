@@ -1,0 +1,11 @@
+.services .lmp-slider h2,
+.services .lmp-slider p {
+	text-align: center;
+}
+
+.services .lmp-row {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
