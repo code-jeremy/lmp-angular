@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "iamlmp"
+  "defaultProject": "iamlmp",
+  "cli": {
+    "analytics": "af9365c4-f026-4c43-b58a-cc7642fc10d6"
+  }
 }
