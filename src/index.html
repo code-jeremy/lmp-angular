@@ -1,42 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head data-ng-controller="HeadController as head">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta name="X-UA-Compatible" content="IE=edge">
-		<base href="/">
-		<title data-ng-bind="head.properties.title">IAMLMP</title>
-		<meta name="description" data-ng-attr-content="{{head.properties.description}}" data-ng-if="head.properties.description" content="Artists, Latin Music, DJ Mixes, Mixtapes, on IAMLMP.COM - Reggaeton, Salsa, Bachata, Merengue, Dembow, Tipico, DJ Mixes and Mixtapes.">
-		<meta name="keywords" data-ng-attr-content="{{head.properties.keywords}}" data-ng-if="head.properties.keywords" content="latin music, latin mixes, latin mixtapes, lmp, iamlmp, lomaximo reggaeton, salsa, bachata, merengue, dembow, urbano">
-		<meta property="og:title" data-ng-attr-content="{{head.properties.title}}" ng-if="head.properties.title" content="IAMLMP">
-		<meta property="og:description" data-ng-attr-content="{{head.properties.description}}" data-ng-if="head.properties.description" content="Artists, Latin Music, DJ Mixes, Mixtapes, on IAMLMP.COM - Reggaeton, Salsa, Bachata, Merengue, Dembow, Tipico, DJ Mixes and Mixtapes.">
-		<meta property="og:image" data-ng-attr-content="{{head.properties.image}}" data-ng-if="head.properties.image" content="https://www.iamlmp.com/assets/img/branding/lmp-social.jpg">
-		<meta property="og:type" data-ng-attr-content="{{head.properties.type}}" data-ng-if="head.properties.type" content="website">
-		<meta property="og:url" data-ng-attr-content="{{head.properties.url}}" ng-if="head.properties.url" content="https://www.iamlmp.com">
-		<meta property="og:site_name" data-ng-attr-content="IAMLMP" content="iamlmp">
-		<meta name="twitter:title" data-ng-attr-content="{{head.properties.title}}" ng-if="head.properties.title" content="IAMLMP">
-		<meta name="twitter:description" data-ng-attr-content="{{head.properties.description}}" data-ng-if="head.properties.description" content="Artists, Latin Music, DJ Mixes, Mixtapes, on IAMLMP.COM - Reggaeton, Salsa, Bachata, Merengue, Dembow, Tipico, DJ Mixes and Mixtapes.">
-		<meta name="twitter:image" data-ng-attr-content="{{head.properties.image}}" data-ng-if="head.properties.image" content="https://www.iamlmp.com/assets/img/branding/lmp-social.jpg">
-		<meta name="twitter:type" data-ng-attr-content="{{head.properties.type}}" data-ng-if="head.properties.type" content="website">
-		<meta name="twitter:url" data-ng-attr-content="{{head.properties.url}}" data-ng-if="head.properties.url" content="https://www.iamlmp.com">
-		<meta name="robots" data-ng-attr-content="{{head.properties.robots}}" data-ng-if="head.properties.robots" content="index">
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="/assets/img/favicons/manifest.json">
-		<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg">
-		<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-		<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
-		<script type="application/ld+json">{"@context":"http://schema.org/","@type":"Organization","name":"iamlmp","logo":"https://www.iamlmp.com/assets/img/branding/lmp-logo.png","url":"https://www.iamlmp.com","sameAs":["https://www.facebook.com/Lomaximoproductions","https://www.twitter.com/lmpmusica","https://www.youtube.com/user/IAMLMP1","https://www.instagram.com/iamlmp"]}</script>
-		<script type="application/ld+json" ng-if="head.properties.ldjson" ng-bind="head.properties.ldjson"></script>
-		<link rel="stylesheet" href="../dist/assets/css/styles.min.css" type="text/css" inline>
-		<link ng-if="head.properties.url === 'https://www.iamlmp.com/podcasts'" rel="alternate" type="application/rss+xml" title="Podcasts" href="https://www.iamlmp.com/rss/podcasts.xml">
-	</head> 
-	<body data-ng-class="body.classes" data-ng-controller="BodyController as body">
-		<noscript><div class="no-script"><p>This site needs javascript to run.</p></div></noscript>
-		<data-uiview data-ui-view="layout"></data-uiview>
-		<script src="/assets/js/ga.js"></script>
-		<script defer src="/assets/js/bundle.min.js?ver=0406182122"></script>
-	</body>
+  <head data-ng-controller="HeadController as head">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="X-UA-Compatible" content="IE=edge" />
+    <base href="/" />
+    <title data-ng-bind="head.properties.title">IAMLMP</title>
+    <meta
+      name="description"
+      data-ng-attr-content="{{head.properties.description}}"
+      data-ng-if="head.properties.description"
+      content="Artists, Latin Music, DJ Mixes, Mixtapes, on IAMLMP.COM - Reggaeton, Salsa, Bachata, Merengue, Dembow, Tipico, DJ Mixes and Mixtapes."
+    />
+    <meta
+      name="keywords"
+      data-ng-attr-content="{{head.properties.keywords}}"
+      data-ng-if="head.properties.keywords"
+      content="latin music, latin mixes, latin mixtapes, lmp, iamlmp, lomaximo reggaeton, salsa, bachata, merengue, dembow, urbano"
+    />
+    <meta
+      property="og:title"
+      data-ng-attr-content="{{head.properties.title}}"
+      ng-if="head.properties.title"
+      content="IAMLMP"
+    />
+    <meta
+      property="og:description"
+      data-ng-attr-content="{{head.properties.description}}"
+      data-ng-if="head.properties.description"
+      content="Artists, Latin Music, DJ Mixes, Mixtapes, on IAMLMP.COM - Reggaeton, Salsa, Bachata, Merengue, Dembow, Tipico, DJ Mixes and Mixtapes."
+    />
+    <meta
+      property="og:image"
+      data-ng-attr-content="{{head.properties.image}}"
+      data-ng-if="head.properties.image"
+      content="https://www.iamlmp.com/assets/img/branding/lmp-social.jpg"
+    />
+    <meta
+      property="og:type"
+      data-ng-attr-content="{{head.properties.type}}"
+      data-ng-if="head.properties.type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      data-ng-attr-content="{{head.properties.url}}"
+      ng-if="head.properties.url"
+      content="https://www.iamlmp.com"
+    />
+    <meta
+      property="og:site_name"
+      data-ng-attr-content="IAMLMP"
+      content="iamlmp"
+    />
+    <meta
+      name="twitter:title"
+      data-ng-attr-content="{{head.properties.title}}"
+      ng-if="head.properties.title"
+      content="IAMLMP"
+    />
+    <meta
+      name="twitter:description"
+      data-ng-attr-content="{{head.properties.description}}"
+      data-ng-if="head.properties.description"
+      content="Artists, Latin Music, DJ Mixes, Mixtapes, on IAMLMP.COM - Reggaeton, Salsa, Bachata, Merengue, Dembow, Tipico, DJ Mixes and Mixtapes."
+    />
+    <meta
+      name="twitter:image"
+      data-ng-attr-content="{{head.properties.image}}"
+      data-ng-if="head.properties.image"
+      content="https://www.iamlmp.com/assets/img/branding/lmp-social.jpg"
+    />
+    <meta
+      name="twitter:type"
+      data-ng-attr-content="{{head.properties.type}}"
+      data-ng-if="head.properties.type"
+      content="website"
+    />
+    <meta
+      name="twitter:url"
+      data-ng-attr-content="{{head.properties.url}}"
+      data-ng-if="head.properties.url"
+      content="https://www.iamlmp.com"
+    />
+    <meta
+      name="robots"
+      data-ng-attr-content="{{head.properties.robots}}"
+      data-ng-if="head.properties.robots"
+      content="index"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" />
+    <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Organization",
+        "name": "iamlmp",
+        "logo": "https://www.iamlmp.com/assets/img/branding/lmp-logo.png",
+        "url": "https://www.iamlmp.com",
+        "sameAs": [
+          "https://www.facebook.com/Lomaximoproductions",
+          "https://www.twitter.com/lmpmusica",
+          "https://www.youtube.com/user/IAMLMP1",
+          "https://www.instagram.com/iamlmp"
+        ]
+      }
+    </script>
+    <script
+      type="application/ld+json"
+      ng-if="head.properties.ldjson"
+      ng-bind="head.properties.ldjson"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="../dist/assets/css/styles.min.css"
+      type="text/css"
+      inline
+    />
+    <link
+      ng-if="head.properties.url === 'https://www.iamlmp.com/podcasts'"
+      rel="alternate"
+      type="application/rss+xml"
+      title="Podcasts"
+      href="https://www.iamlmp.com/rss/podcasts.xml"
+    />
+  </head>
+  <body
+    data-ng-class="body.classes"
+    data-ng-controller="BodyController as body"
+  >
+    <noscript
+      ><div class="no-script">
+        <p>This site needs javascript to run.</p>
+      </div></noscript
+    >
+    <data-uiview data-ui-view="layout"></data-uiview>
+    <script src="/assets/js/ga.js"></script>
+    <script defer src="/assets/js/bundle.min.js?ver=0406182122"></script>
+  </body>
 </html>
