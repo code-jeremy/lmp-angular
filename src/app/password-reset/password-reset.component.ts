@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-password-reset',
-  templateUrl: './views/password-reset.html',
-  styleUrls: ['./password-reset.css']
+  template: './views/password-reset.html',
+  styles: ['./password-reset.css']
 })
 export class PasswordResetComponent implements OnInit {
 

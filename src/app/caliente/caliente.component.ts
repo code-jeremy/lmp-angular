@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-caliente',
-  templateUrl: './views/caliente.html',
+  template: './views/caliente.html',
   styleUrls: ['./caliente.css']
 })
 export class CalienteComponent implements OnInit {

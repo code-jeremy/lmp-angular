@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-genre-filter',
-  templateUrl: './views/genre-filter.html',
-  styleUrls: ['./genre-filter.css']
+  template: './views/genre-filter.html',
+  styles: ['src/assets/css/styles.min.css']
 })
 export class GenreFilterComponent implements OnInit {
 

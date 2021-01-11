@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-queue',
-  templateUrl: './views/queue.html',
-  styleUrls: ['./queue.css']
+  template: './views/queue.html',
+  styles: ['./queue.css']
 })
 export class QueueComponent implements OnInit {
 

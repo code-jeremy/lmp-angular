@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-music-previewer',
-  templateUrl: './views/music-previewer.html',
-  styleUrls: ['./music-previewer.css']
+  template: './views/music-previewer.html',
+  styles: ['./music-previewer.css']
 })
 export class MusicPreviewerComponent implements OnInit {
 

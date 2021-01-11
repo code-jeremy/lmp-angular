@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-order',
-  templateUrl: './views/order.html',
-  styleUrls: ['/']
+  template: './views/order.html',
+  styles: ['/']
 })
 export class OrderComponent implements OnInit {
 

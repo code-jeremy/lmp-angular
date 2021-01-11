@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <app-header></app-header>
   <head data-ng-controller="HeadController as head">
     <meta charset="utf-8" />
     <meta
@@ -137,12 +138,7 @@
       ng-if="head.properties.ldjson"
       ng-bind="head.properties.ldjson"
     ></script>
-    <link
-      rel="stylesheet"
-      href="../dist/assets/css/styles.min.css"
-      type="text/css"
-      inline
-    />
+   
     <link
       ng-if="head.properties.url === 'https://www.iamlmp.com/podcasts'"
       rel="alternate"
@@ -151,6 +147,7 @@
       href="https://www.iamlmp.com/rss/podcasts.xml"
     />
   </head>
+  
   <body
     data-ng-class="body.classes"
     data-ng-controller="BodyController as body"
@@ -161,8 +158,9 @@
       </div></noscript
     >
     <data-uiview data-ui-view="layout"></data-uiview>
-    <script src="/assets/js/ga.js"></script>
-    <script defer src="/assets/js/bundle.min.js?ver=0406182122"></script>
+    <script src="src/assets/js/ga.js"></script>
+    <script defer src="src/assets/js/bundle.min.js"></script>
+    <app-root></app-root>
   </body>
 </html>
 

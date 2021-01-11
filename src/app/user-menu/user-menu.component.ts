@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-menu',
-  templateUrl: './views/user-menu.html',
-  styleUrls: ['/']
+  template: './views/user-menu.html',
+  styles: ['/']
 })
 export class UserMenuComponent implements OnInit {
 
