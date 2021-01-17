@@ -47,7 +47,7 @@ import { MyPlaylistsComponent } from './user/playlists/playlists.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { UserMenuComponent } from './user-menu/user-menu.component';
 import { VideoComponent } from './videos/videos.component';
-import { HeaderComponent } from './header/header.component';
+
 
 
 @NgModule({
@@ -97,7 +97,6 @@ import { HeaderComponent } from './header/header.component';
     ProfileComponent,
     UserMenuComponent,
     VideoComponent,
-    HeaderComponent,
   ],
   imports: [
     BrowserModule,
