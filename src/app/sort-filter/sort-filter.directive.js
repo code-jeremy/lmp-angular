@@ -39,7 +39,11 @@
       }, {
         value: 'plays',
         name: 'Plays'
-      },
+      }, {
+        value: 'date',
+        name: 'Date'
+      }
+
     ];
 
     sort_filter.change_order = () => {
